@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generador de Memes</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
+    <header class="encabezado">
+        <h1>Generador de Memes</h1>
+        <div class="botones-menues">
+            <div class="boton-menu"><span>📷​ </span><p class="texto-menu">Imagen</p></div>
+            <div class="boton-menu"><span>🔠​ </span><p class="texto-menu">Texto</p></div>
+            <div class="boton-menu"><span>💡 ​</span><p class="texto-menu">Modo Oscuro</p></div>
+        </div>
+    </header>
+    <section class="espacio-de-trabajo">
+        <div class="lienzo">
+        <p class="texto-meme"></p>
+        <img src="#" alt="Imagen-meme" class="imagen">
+        <p class="texto-meme"></p>
+    </div>
+    </section>
+    <aside class="editor">
+        <div class="panel-editor" id="editor-imagen"></div>
+        <div class="panel-editor" id="editor-texto"></div>
+    </aside>
+    <footer>
+        <button class="descargar">​⏬​ Descargar</button>
+    </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
