@@ -8,20 +8,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="dia">
     <header class="encabezado">
         <h1>Generador de Memes</h1>
         <div class="botones-menues">
-            <div class="boton-menu"><span>📷​ </span><p class="texto-menu">Imagen</p></div>
-            <div class="boton-menu"><span>🔠​ </span><p class="texto-menu">Texto</p></div>
-            <div class="boton-menu"><span>💡 ​</span><p class="texto-menu">Modo Oscuro</p></div>
+            <button class="boton-menu" id="edicion-imagen"><img class="icono" src="images/color.png"><p class="texto-menu">Imagen</p></button>
+            <button class="boton-menu" id="edicion-texto"><img class="icono" src="images/a.png"><p class="texto-menu">Texto</p></button>
+            <button class="boton-menu" id="edicion-modo"><img class="icono" src="images/lightbulb.png"><p class="texto-menu">Modo <span class="modo_o">oscuro</span><span class="modo_c">claro</span></p></button>
         </div>
     </header>
     <section class="espacio-de-trabajo">
         <div class="lienzo">
-        <p class="texto-meme"></p>
+        <p class="texto-meme">TEXTO SUPERIOR</p>
         <img src="#" alt="Imagen-meme" class="imagen">
-        <p class="texto-meme"></p>
+        <p class="texto-meme">TEXTO INFERIOR</p>
     </div>
     </section>
     <aside class="editor">
@@ -29,7 +29,7 @@
         <div class="panel-editor" id="editor-texto"></div>
     </aside>
     <footer>
-        <button class="descargar">​⏬​ Descargar</button>
+        <button class="descargar"><img class="icono" src="images/download.png">Descargar</button>
     </footer>
 
     <script src="script.js"></script>

@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Passion+One&family=Sen&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:rgb(26, 85, 75);
+}
+
+
+header {
+    background-color:rgb(17, 56, 55);
+    padding-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Francois One', sans-serif;
+    font-size: 3.4em;
+    font-weight: 70;
+    color: rgb(176, 252, 252);
+    text-align: center;
+}
+
+.botones-menues {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 35%;
+    padding-right: 35%;
+}
+
+.boton-menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #00000000;
+    border: 0;    
+    border-radius: 15px;
+    background-color: rgb(17, 56, 55);
+    padding-right: 10px;
+    padding-left: 10px;
+
+}
+
+.boton-menu:hover{
+    cursor: pointer;
+    filter: invert();
+}
+
+.icono {
+    width: 45px;
+    padding-right: 10px;
+}
+
+.texto-menu {
+    display: inline-block;
+    font-family: 'Francois One', sans-serif;
+    font-weight: 40;
+    font-size: 1.7vw;
+    color: rgb(176, 252, 252);
+}
+
+.espacio-de-trabajo {
+    width: 610px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.lienzo {
+    height: 610px;
+    background-color: #777777;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.texto-meme {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: black;
+    font-family: 'Passion One', sans-serif;
+    font-size: 4em;
+    color: #ffffff;
+    text-align: center;
+}
+
+.imagen{
+     margin: auto;
+}
+
+.descargar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+    border: 0px;
+    font-family: 'Francois One', sans-serif;
+    font-weight: 40;
+    font-size: 1.7vw;
+    color: rgb(176, 252, 252);
+    margin: auto;
+    margin-top: 20px;
+    background-color: rgb(17, 56, 55);
+}
+
+.descargar:hover{
+    cursor: pointer;
+    filter: invert();
+}
+
+.dia{
+    filter: invert();
+    background-color: rgb(229, 170, 180);
+}
+
+.modo_c{
+    display: none;
+}
