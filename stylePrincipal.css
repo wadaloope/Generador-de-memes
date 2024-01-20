@@ -77,16 +77,11 @@ h1 {
     margin-top: 10px;
 }
 
-.lienzo,
-.image {
+.lienzo {
     height: 510px;
     background-color: #77777731;
     align-items: center;
     position: relative;
-}
-
-.image {
-    height: 510px;
 }
 
 .texto-meme {
@@ -169,4 +164,39 @@ input[type="file"] {
     height: 510px;
     width: 510px;
     object-fit: cover;
+}
+
+
+@media (max-width:970px) {
+    body {
+        flex-direction: column;
+    }
+
+    .principal {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .panel-editor {
+        width: 100vw;
+        height: auto;
+    }
+
+    .espacio-de-trabajo,
+    .lienzo {
+        width: 100vw;
+        height: 100vw;
+    }
+
+    .texto-meme {
+        width: 100vw;
+    }
+
+    #imgTag {
+        width: 100vw;
+        height: 100vw;
+        object-fit: cover;
+    }
 }
