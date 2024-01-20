@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="dia">
+<body>
     <div class="principal">
         <header class="encabezado">
             <h1>Generador de Memes</h1>
@@ -20,27 +20,31 @@
                     <p class="texto-menu">Texto</p>
                 </button>
                 <button class="boton-menu" id="edicion-modo"><img class="icono" src="images/lightbulb.png">
-                    <p class="texto-menu">Modo <span class="modo_o">oscuro</span><span class="modo_c">claro</span></p>
+                    <p class="texto-menu">Modo <span class="modo_o">oscuro</span></p>
                 </button>
             </div>
         </header>
         <section class="espacio-de-trabajo">
             <div class="lienzo">
-                <p class="texto-meme">TEXTO SUPERIOR</p>
-                <img src="#" alt="Imagen-meme" class="imagen">
-                <p class="texto-meme">TEXTO INFERIOR</p>
+                <div id="image">
+                    <img src="#" alt="" id="imgTag"/>
+                </div>
+                <label for="fileInput" id="label">
+                    Cargar imagen</label>
+                <input type="file" name="" id="fileInput" />
+                </label>
+                <p class="texto-meme" id="arriba">TEXTO SUPERIOR</p>
+                <p class="texto-meme" id="abajo">TEXTO INFERIOR</p>
             </div>
         </section>
         <footer>
             <button class="descargar"><img class="icono" src="images/download.png">Descargar</button>
         </footer>
     </div>
-    <!--     <aside class="editr"> -->
     <div class="panel-editor" id="editor-imagen">
         <p>datos</p>
     </div>
     <div class="panel-editor" id="editor-texto"></div>
-    <!--     </aside> -->
     <script src="script.js"></script>
 </body>
 

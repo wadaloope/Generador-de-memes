@@ -77,16 +77,21 @@ h1 {
     margin-top: 10px;
 }
 
-.lienzo {
+.lienzo,
+.image {
     height: 510px;
-    background-color: #777777;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    background-color: #77777731;
+    align-items: center;
+    position: relative;
+}
+
+.image {
+    height: 510px;
 }
 
 .texto-meme {
-    width: auto;
+    position: absolute;
+    width: 510px;
     padding-top: 12px;
     padding-bottom: 12px;
     background-color: black;
@@ -96,8 +101,12 @@ h1 {
     text-align: center;
 }
 
-.imagen {
-    margin: auto;
+#arriba {
+    top: 0;
+}
+
+#abajo {
+    bottom: 0;
 }
 
 .descargar {
@@ -141,4 +150,23 @@ h1 {
 
 .modo_c {
     display: none;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#label {
+    padding-top: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    left: 42%;
+
+}
+
+#imgTag {
+    height: 510px;
+    width: 510px;
+    object-fit: cover;
 }
