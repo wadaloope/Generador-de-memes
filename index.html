@@ -9,29 +9,38 @@
 </head>
 
 <body class="dia">
-    <header class="encabezado">
-        <h1>Generador de Memes</h1>
-        <div class="botones-menues">
-            <button class="boton-menu" id="edicion-imagen"><img class="icono" src="images/color.png"><p class="texto-menu">Imagen</p></button>
-            <button class="boton-menu" id="edicion-texto"><img class="icono" src="images/a.png"><p class="texto-menu">Texto</p></button>
-            <button class="boton-menu" id="edicion-modo"><img class="icono" src="images/lightbulb.png"><p class="texto-menu">Modo <span class="modo_o">oscuro</span><span class="modo_c">claro</span></p></button>
-        </div>
-    </header>
-    <section class="espacio-de-trabajo">
-        <div class="lienzo">
-        <p class="texto-meme">TEXTO SUPERIOR</p>
-        <img src="#" alt="Imagen-meme" class="imagen">
-        <p class="texto-meme">TEXTO INFERIOR</p>
+    <div class="principal">
+        <header class="encabezado">
+            <h1>Generador de Memes</h1>
+            <div class="botones-menues">
+                <button class="boton-menu" id="edicionImagen"><img class="icono" src="images/color.png">
+                    <p class="texto-menu">Imagen</p>
+                </button>
+                <button class="boton-menu" id="edicion-texto"><img class="icono" src="images/a.png">
+                    <p class="texto-menu">Texto</p>
+                </button>
+                <button class="boton-menu" id="edicion-modo"><img class="icono" src="images/lightbulb.png">
+                    <p class="texto-menu">Modo <span class="modo_o">oscuro</span><span class="modo_c">claro</span></p>
+                </button>
+            </div>
+        </header>
+        <section class="espacio-de-trabajo">
+            <div class="lienzo">
+                <p class="texto-meme">TEXTO SUPERIOR</p>
+                <img src="#" alt="Imagen-meme" class="imagen">
+                <p class="texto-meme">TEXTO INFERIOR</p>
+            </div>
+        </section>
+        <footer>
+            <button class="descargar"><img class="icono" src="images/download.png">Descargar</button>
+        </footer>
     </div>
-    </section>
-    <aside class="editor">
-        <div class="panel-editor" id="editor-imagen"></div>
-        <div class="panel-editor" id="editor-texto"></div>
-    </aside>
-    <footer>
-        <button class="descargar"><img class="icono" src="images/download.png">Descargar</button>
-    </footer>
-
+    <!--     <aside class="editr"> -->
+    <div class="panel-editor" id="editor-imagen">
+        <p>datos</p>
+    </div>
+    <div class="panel-editor" id="editor-texto"></div>
+    <!--     </aside> -->
     <script src="script.js"></script>
 </body>
 
