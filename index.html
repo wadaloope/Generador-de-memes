@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generador de Memes</title>
     <link rel="stylesheet" href="stylePrincipal.css">
+    <link rel="stylesheet" href="stylePaneles.css">
 </head>
 
 <body>
+    <!--------------------- ↓↓↓↓ - Sección principal de la aplicación - ↓↓↓↓--------------------->
     <div class="principal">
         <header class="encabezado">
             <h1>Generador de Memes</h1>
@@ -27,7 +29,7 @@
         <section class="espacio-de-trabajo">
             <div class="lienzo">
                 <div id="image">
-                    <img src="#" alt="" id="imgTag"/>
+                    <img src="#" alt="" id="imgTag" />
                 </div>
                 <label for="fileInput" id="label">
                     Cargar imagen</label>
@@ -41,10 +43,163 @@
             <button class="descargar"><img class="icono" src="images/download.png">Descargar</button>
         </footer>
     </div>
+    <!---------------------------- ↓↓↓↓ - Panel editor de imagen - ↓↓↓↓---------------------------->
     <div class="panel-editor" id="editor-imagen">
-        <p>datos</p>
+        <h3 class="titulo-seccion">IMAGEN</h3>
+        <div class="subseccion">
+            <label for="url-imagen" class="titulo-falso">URL</label><br>
+            <input type="text" name="url-imagen" id="url-imagen" required size="20"
+                placeholder="www.images.com/main/pato.png" />
+        </div>
+        <div class="config-fondo">
+            <p class="labelFalso">FONDO</p>
+            <div class="confgFdo">
+                <div class="colour">
+                    <input type="color" id="colorFondo" name="colorFondo" value="#000000" />
+                    <label for="colorFondo">COLOR</label>
+                </div>
+                <label for="efecto-fondo"></label>
+                <select name="efecto-fondo" id="efecto-fondo">
+                    <option value="">Ninguno</option>
+                    <option value="aclarar">Aclarar</option>
+                    <option value="oscurecer">Oscurecer</option>
+                    <option value="diferencia">Diferencia</option>
+                    <option value="luminosidad">Luminosidad</option>
+                    <option value="multiplicar">Multiplicar</option>
+                </select>
+            </div>
+        </div>
+        <div class="config-fondo">
+            <p class="labelFalso">FILTROS</p>
+            <div class="barra-filtro">
+                <label for="brillo">BRILLO</label><br>
+                <input type="range" class="rango" id="brillo" name="brillo" min="0" max="1" value="1" step="0.1" />
+            </div>
+            <div class="barra-filtro">
+                <label for="opacidad">OPACIDAD</label><br>
+                <input type="range" class="rango" id="opacidad" name="opacidad" min="0" max="1" value="1" step="0.1" />
+            </div>
+            <div class="barra-filtro">
+                <label for="contraste">CONTRASTE</label><br>
+                <input type="range" class="rango" id="contraste" name="contraste" min="100" max="1000" value="100"
+                    step="1" />
+            </div>
+            <div class="barra-filtro">
+                <label for="desenfoque">DESENFOQUE</label><br>
+                <input type="range" class="rango" id="desenfoque" name="desenfoque" min="0" max="10" value="0"
+                    step="0.1" />
+            </div>
+            <div class="barra-filtro">
+                <label for="escalaGrises">ESCALA DE GRISES</label><br>
+                <input type="range" class="rango" id="escalaGrises" name="escalaGrises" min="0" max="100" value="0"
+                    step="1" />
+            </div>
+            <div class="barra-filtro">
+                <label for="sepia">SEPIA</label><br>
+                <input type="range" class="rango" id="sepia" name="sepia" min="0" max="100" value="0" step="1" />
+            </div>
+            <div class="barra-filtro">
+                <label for="escalaHue">HUE</label><br>
+                <input type="range" class="rango" id="escalaHue" name="escalaHue" min="0" max="359" value="0"
+                    step="1" />
+            </div>
+            <div class="barra-filtro">
+                <label for="saturacion">SATURACIÓN</label><br>
+                <input type="range" class="rango" id="saturacion" name="saturacion" min="100" max="1000" value="100"
+                    step="10" />
+            </div>
+            <div class="barra-filtro">
+                <label for="negativo">NEGATIVO</label><br>
+                <input type="range" class="rango" id="negativo" name="negativo" min="0" max="1" value="1" step="0.1" />
+            </div>
+        </div>
+        <button class="boton-filtros">REESTABLECER FILTROS</button>
     </div>
-    <div class="panel-editor" id="editor-texto"></div>
+    <!---------------------------- ↓↓↓↓ - Panel editor de texto - ↓↓↓↓---------------------------->
+    <div class="panel-editor" id="editor-texto">
+        <h3 class="titulo-seccion">TEXTO</h3>
+        <div class="subseccion">
+            <label for="superior" class="titulo-falso">SUPERIOR</label>
+            <input type="text" name="superior" id="superior" required size="20" placeholder="TEXTO SUPERIOR" />
+            <div class="check-texto">
+                <input type="checkbox" id="sin-text-s" name="sin-text-s" unchecked />
+                <label for="sin-text-s">Sin texto superior</label>
+            </div>
+        </div>
+        <div class="subseccion">
+            <label for="inferior" class="titulo-falso">INFERIOR</label>
+            <input type="text" name="inferior" id="inferior" required size="20" placeholder="TEXTO INFERIOR" />
+            <div class="check-texto">
+                <input type="checkbox" id="sin-text-i" name="sin-text-i" unchecked />
+                <label for="sin-text-i">Sin texto inferior</label>
+            </div>
+        </div>
+        <div class="selec-fuente">
+            <label for="fuente" class="titulo-falso">FUENTE</label>
+            <select name="fuente" id="fuente">
+                <option value="">--Elegí una opción--</option>
+                <option value="arial">Arial</option>
+                <option value="arial-black">Arial Black</option>
+                <option value="typewriter">American Typewriter</option>
+                <option value="andale">Andale Mono</option>
+                <option value="comics">Comic Sans MS</option>
+                <option value="helvetica">Helvetica</option>
+                <option value="impact">Impact</option>
+                <option value="verdana">Verdana</option>
+                <option value="times">Times New Roman</option>
+            </select>
+            <div class="formato-texto">
+                <input type="number" id="formatoTxt" value="16" min="12" max="85" step="1" />
+                <img class="btnJustif" src="images/izquierda.png" alt="">
+                <img class="btnJustif" src="images/centro.png" alt="">
+                <img class="btnJustif" src="images/derecha.png" alt="">
+            </div>
+        </div>
+        <div class="colores">
+            <div class="casillaColor">
+                <p class="labelFalso">COLOR</p>
+                <div class="colourTxt">
+                    <input type="color" id="colorPrincipal" name="colorPrincipal" value="#000000" />
+                    <label for="colorPrincipal">COLOR</label>
+                </div>
+            </div>
+            <div class="casillaColor">
+                <p class="labelFalso">FONDO</p>
+                <div class="colourTxt">
+                    <input type="color" id="colorFondo" name="ColorFondo" value="#FFFFFF" />
+                    <label for="ColorFondo">FONDO</label>
+                </div>
+            </div>
+        </div>
+        <div class="check-texto">
+            <input type="checkbox" id="sin-fondo" name="sin-fondo" unchecked />
+            <label for="sin-fondo">Sin color de fondo</label>
+        </div>
+        <div class="selec-formato-txt">
+            <p class="labelFalso">CONTORNO</p>
+            <div class="contornoDiv">
+                <button class="contorno">Ninguno</button>
+                <button class="contorno">Claro</button>
+                <button class="contorno">Oscuro</button>
+            </div>
+        </div>
+        <div class="selec-formato-txt">
+            <p class="labelFalso">ESPACIADO</p>
+            <input type="number" id="espaciado" value="21" min="10" max="50" step="1" />
+        </div>
+        <div class="selec-formato-txt">
+            <label for="interlin" class="titulo-falso">INTERLINEADO</label>
+            <select name="interlin" id="interlin">
+                <option value="">--Elegi una opción--</option>
+                <option value="interlin1">0.8</option>
+                <option value="interlin2">1</option>
+                <option value="interlin3">1.2</option>
+                <option value="interlin4">1.5</option>
+                <option value="interlin5">2</option>
+                <option value="interlin6">2.5</option>
+            </select>
+        </div>
+    </div>
     <script src="scriptPrincipal.js"></script>
 </body>
 

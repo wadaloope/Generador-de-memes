@@ -51,13 +51,27 @@ btnModo.addEventListener("click", (e) => {
     if (nocheEstado) {
         document.getElementsByTagName('body')[0].classList.add("dia");
         document.getElementsByClassName('modo_o')[0].innerHTML = "claro";
-        document.getElementById("imgTag").style.filter = "invert(100%)";
+
+//------parche para contrarrestar los efectos de implementar el modo oscuro de manera peculiar------
+        document.getElementById("imgTag").style.filter = "invert(100%)";                            //
+        for (let i = 0; i < document.getElementsByTagName('input').length; i++)                     //
+            document.getElementsByTagName('input')[i].style.filter = "invert(100%)";                //
+        for (let i = 0; i < document.getElementsByTagName('select').length; i++)                     //
+            document.getElementsByTagName('select')[i].style.filter = "invert(100%)";               //
+//------------------------------------------fin de parche-------------------------------------------
         nocheEstado = false;
     }
     else {
         document.getElementsByTagName('body')[0].classList.remove("dia");
         document.getElementsByClassName('modo_o')[0].innerHTML = "oscuro";
-        document.getElementById("imgTag").style.filter = "none";
+
+//------parche para contrarrestar los efectos de implementar el modo oscuro de manera peculiar------
+        document.getElementById("imgTag").style.filter = "none";                                    //
+        for (let i = 0; i < document.getElementsByTagName('input').length; i++)                     //
+            document.getElementsByTagName('input')[i].style.filter = "none";                        //
+        for (let i = 0; i < document.getElementsByTagName('select').length; i++)                     //
+            document.getElementsByTagName('select')[i].style.filter = "none";                       //
+//------------------------------------------fin de parche-------------------------------------------
         nocheEstado = true;
     }
 })

@@ -128,8 +128,8 @@ h1 {
 
 .panel-editor {
     width: 400px;
-    height: 100vh;
-    background-color: rgb(199, 174, 115);
+    height: auto;
+    background-color: rgb(47, 150, 133);
     display: none;
 }
 
@@ -169,34 +169,48 @@ input[type="file"] {
 
 @media (max-width:970px) {
     body {
+        width: calc(100vw-17px);
         flex-direction: column;
     }
 
     .principal {
-        width: auto;
+        width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;
     }
 
     .panel-editor {
-        width: 100vw;
+        width: 100%;
         height: auto;
     }
 
     .espacio-de-trabajo,
     .lienzo {
-        width: 100vw;
-        height: 100vw;
+        max-width: 510px;
+        max-height: 510px;
     }
 
     .texto-meme {
-        width: 100vw;
+        width: 100%;
     }
 
     #imgTag {
-        width: 100vw;
-        height: 100vw;
+        max-width: 510px;
+        max-height: 510px;
         object-fit: cover;
     }
+}
+
+@media (max-width:510px) {
+.espacio-de-trabajo,
+.lienzo {
+    max-width: 100vw;
+    height: 100vw;
+}
+#imgTag {
+    width: 100%;
+    height: 100vw;
+    object-fit: cover;
+}
 }
