@@ -17,12 +17,12 @@ btnImg.addEventListener("click", (e) => {
         edicImg = true;
         edicTxt = false;
         btnImg.style.filter = "brightness(200%)";
-        btnTxt.style.filter = "none";
+        btnTxt.style.filter = "brightness(100%)";
     }
     else {
         panelImg.classList.remove('panelOn');
         edicImg = false;
-        btnImg.style.filter = "none";
+        btnImg.style.filter = "brightness(100%)";
     }
 })
 
@@ -35,12 +35,12 @@ btnTxt.addEventListener("click", (e) => {
         edicTxt = true;
         edicImg = false;
         btnTxt.style.filter = "brightness(200%)";
-        btnImg.style.filter = "none";
+        btnImg.style.filter = "brightness(100%)";
     }
     else {
         panelTxt.classList.remove('panelOn');
         edicTxt = false;
-        btnTxt.style.filter = "none";
+        btnTxt.style.filter = "brightness(100%)";
     }
 })
 
@@ -53,11 +53,9 @@ btnModo.addEventListener("click", (e) => {
         document.getElementsByClassName('modo_o')[0].innerHTML = "claro";
 
 //------parche para contrarrestar los efectos de implementar el modo oscuro de manera peculiar------
-        document.getElementById("imgTag").style.filter = "invert(100%)";                            //
-        for (let i = 0; i < document.getElementsByTagName('input').length; i++)                     //
-            document.getElementsByTagName('input')[i].style.filter = "invert(100%)";                //
-        for (let i = 0; i < document.getElementsByTagName('select').length; i++)                     //
-            document.getElementsByTagName('select')[i].style.filter = "invert(100%)";               //
+        for (let i = 0; i < document.getElementsByClassName('cajaColor').length; i++)               //
+            document.getElementsByClassName('cajaColor')[i].style.filter = "invert(100%)";          //
+            document.getElementsByClassName('lienzo')[0].style.filter="invert(100%)"                //
 //------------------------------------------fin de parche-------------------------------------------
         nocheEstado = false;
     }
@@ -66,11 +64,12 @@ btnModo.addEventListener("click", (e) => {
         document.getElementsByClassName('modo_o')[0].innerHTML = "oscuro";
 
 //------parche para contrarrestar los efectos de implementar el modo oscuro de manera peculiar------
+        for (let i = 0; i < document.getElementsByClassName('cajaColor').length; i++)               //
+            document.getElementsByClassName('cajaColor')[i].style.filter = "none";                  //
         document.getElementById("imgTag").style.filter = "none";                                    //
-        for (let i = 0; i < document.getElementsByTagName('input').length; i++)                     //
-            document.getElementsByTagName('input')[i].style.filter = "none";                        //
-        for (let i = 0; i < document.getElementsByTagName('select').length; i++)                     //
-            document.getElementsByTagName('select')[i].style.filter = "none";                       //
+        document.getElementsByClassName("texto-meme")[0].style.filter="none"                        //
+        document.getElementsByClassName("texto-meme")[1].style.filter="none"                        //
+        document.getElementsByClassName('lienzo')[0].style.filter="invert(0%)"                      //
 //------------------------------------------fin de parche-------------------------------------------
         nocheEstado = true;
     }
@@ -80,7 +79,6 @@ btnModo.addEventListener("click", (e) => {
 
 fileInput.addEventListener("change", (e) => {
     const file = e.target.files[0];
-    console.dir(e.target);
     if (file) {
         const reader = new FileReader();
         reader.onload = function (event) {
@@ -92,4 +90,6 @@ fileInput.addEventListener("change", (e) => {
     }
 
 })
+
+
 

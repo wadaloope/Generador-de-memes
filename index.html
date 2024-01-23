@@ -15,7 +15,7 @@
         <header class="encabezado">
             <h1>Generador de Memes</h1>
             <div class="botones-menues">
-                <button class="boton-menu" id="edicionImagen"><img class="icono" src="images/color.png">
+                <button class="boton-menu" id="edicion-imagen"><img class="icono" src="images/color.png">
                     <p class="texto-menu">Imagen</p>
                 </button>
                 <button class="boton-menu" id="edicion-texto"><img class="icono" src="images/a.png">
@@ -55,62 +55,62 @@
             <p class="labelFalso">FONDO</p>
             <div class="confgFdo">
                 <div class="colour">
-                    <input type="color" id="colorFondo" name="colorFondo" value="#000000" />
+                    <input type="color" class="cajaColor" id="colorFondo" name="colorFondo" value="#000000" />
                     <label for="colorFondo">COLOR</label>
                 </div>
                 <label for="efecto-fondo"></label>
                 <select name="efecto-fondo" id="efecto-fondo">
                     <option value="">Ninguno</option>
-                    <option value="aclarar">Aclarar</option>
-                    <option value="oscurecer">Oscurecer</option>
-                    <option value="diferencia">Diferencia</option>
-                    <option value="luminosidad">Luminosidad</option>
-                    <option value="multiplicar">Multiplicar</option>
+                    <option value="lighten">Aclarar</option>
+                    <option value="darken">Oscurecer</option>
+                    <option value="difference">Diferencia</option>
+                    <option value="luminosity">Luminosidad</option>
+                    <option value="multiply">Multiplicar</option>
                 </select>
             </div>
         </div>
         <div class="config-fondo">
             <p class="labelFalso">FILTROS</p>
             <div class="barra-filtro">
-                <label for="brillo">BRILLO</label><br>
-                <input type="range" class="rango" id="brillo" name="brillo" min="0" max="1" value="1" step="0.1" />
+                <label for="brightness">BRILLO</label><br>
+                <input type="range" class="rango" id="brightness" name="1" min="0" max="1" value="1" step="0.1" />
             </div>
             <div class="barra-filtro">
-                <label for="opacidad">OPACIDAD</label><br>
-                <input type="range" class="rango" id="opacidad" name="opacidad" min="0" max="1" value="1" step="0.1" />
+                <label for="opacity">OPACIDAD</label><br>
+                <input type="range" class="rango" id="opacity" name="2" min="0" max="1" value="1" step="0.1" />
             </div>
             <div class="barra-filtro">
-                <label for="contraste">CONTRASTE</label><br>
-                <input type="range" class="rango" id="contraste" name="contraste" min="100" max="1000" value="100"
-                    step="1" />
+                <label for="contrast">CONTRASTE</label><br>
+                <input type="range" class="rango" id="contrast" name="3" min="0" max="1000" value="100"
+                    step="50" />
             </div>
             <div class="barra-filtro">
-                <label for="desenfoque">DESENFOQUE</label><br>
-                <input type="range" class="rango" id="desenfoque" name="desenfoque" min="0" max="10" value="0"
+                <label for="blur">DESENFOQUE</label><br>
+                <input type="range" class="rango" id="blur" name="4" min="0" max="10" value="0"
                     step="0.1" />
             </div>
             <div class="barra-filtro">
-                <label for="escalaGrises">ESCALA DE GRISES</label><br>
-                <input type="range" class="rango" id="escalaGrises" name="escalaGrises" min="0" max="100" value="0"
-                    step="1" />
-            </div>
-            <div class="barra-filtro">
-                <label for="sepia">SEPIA</label><br>
-                <input type="range" class="rango" id="sepia" name="sepia" min="0" max="100" value="0" step="1" />
-            </div>
-            <div class="barra-filtro">
-                <label for="escalaHue">HUE</label><br>
-                <input type="range" class="rango" id="escalaHue" name="escalaHue" min="0" max="359" value="0"
-                    step="1" />
-            </div>
-            <div class="barra-filtro">
-                <label for="saturacion">SATURACIÓN</label><br>
-                <input type="range" class="rango" id="saturacion" name="saturacion" min="100" max="1000" value="100"
+                <label for="greyscale">ESCALA DE GRISES</label><br>
+                <input type="range" class="rango" id="greyscale" name="5" min="0" max="100" value="0"
                     step="10" />
             </div>
             <div class="barra-filtro">
-                <label for="negativo">NEGATIVO</label><br>
-                <input type="range" class="rango" id="negativo" name="negativo" min="0" max="1" value="1" step="0.1" />
+                <label for="sepia">SEPIA</label><br>
+                <input type="range" class="rango" id="sepia" name="6" min="0" max="100" value="0" step="10" />
+            </div>
+            <div class="barra-filtro">
+                <label for="hue-rotate">HUE</label><br>
+                <input type="range" class="rango" id="hue-rotate" name="7" min="0" max="359" value="0"
+                    step="15" />
+            </div>
+            <div class="barra-filtro">
+                <label for="saturate">SATURACIÓN</label><br>
+                <input type="range" class="rango" id="saturate" name="8" min="100" max="1000" value="100"
+                    step="50" />
+            </div>
+            <div class="barra-filtro">
+                <label for="invert">NEGATIVO</label><br>
+                <input type="range" class="rango" id="invert" name="9" min="0" max="1" value="0" step="0.1" />
             </div>
         </div>
         <button class="boton-filtros">REESTABLECER FILTROS</button>
@@ -137,8 +137,8 @@
         <div class="selec-fuente">
             <label for="fuente" class="titulo-falso">FUENTE</label>
             <select name="fuente" id="fuente">
-                <option value="">--Elegí una opción--</option>
                 <option value="arial">Arial</option>
+                <option value="sen">Sen</option>
                 <option value="arial-black">Arial Black</option>
                 <option value="typewriter">American Typewriter</option>
                 <option value="andale">Andale Mono</option>
@@ -150,24 +150,24 @@
             </select>
             <div class="formato-texto">
                 <input type="number" id="formatoTxt" value="16" min="12" max="85" step="1" />
-                <img class="btnJustif" src="images/izquierda.png" alt="">
-                <img class="btnJustif" src="images/centro.png" alt="">
-                <img class="btnJustif" src="images/derecha.png" alt="">
+                <img class="btnJustif" value="left" src="images/izquierda.png" alt="">
+                <img class="btnJustif" value="center" src="images/centro.png" alt="">
+                <img class="btnJustif" value="right" src="images/derecha.png" alt="">
             </div>
         </div>
         <div class="colores">
             <div class="casillaColor">
                 <p class="labelFalso">COLOR</p>
                 <div class="colourTxt">
-                    <input type="color" id="colorPrincipal" name="colorPrincipal" value="#000000" />
+                    <input type="color" class="cajaColor" id="colorPrincipal" name="colorPrincipal" value="#FFFFFF" />
                     <label for="colorPrincipal">COLOR</label>
                 </div>
             </div>
             <div class="casillaColor">
                 <p class="labelFalso">FONDO</p>
                 <div class="colourTxt">
-                    <input type="color" id="colorFondo" name="ColorFondo" value="#FFFFFF" />
-                    <label for="ColorFondo">FONDO</label>
+                    <input type="color" class="cajaColor" id="fondoTexto" name="fondoTexto" value="#000000" />
+                    <label for="fondoTexto">FONDO</label>
                 </div>
             </div>
         </div>
@@ -185,22 +185,24 @@
         </div>
         <div class="selec-formato-txt">
             <p class="labelFalso">ESPACIADO</p>
-            <input type="number" id="espaciado" value="21" min="10" max="50" step="1" />
+            <input type="number" id="espaciado" value="12" min="10" max="50" step="1" />
         </div>
         <div class="selec-formato-txt">
             <label for="interlin" class="titulo-falso">INTERLINEADO</label>
             <select name="interlin" id="interlin">
                 <option value="">--Elegi una opción--</option>
-                <option value="interlin1">0.8</option>
-                <option value="interlin2">1</option>
-                <option value="interlin3">1.2</option>
-                <option value="interlin4">1.5</option>
-                <option value="interlin5">2</option>
-                <option value="interlin6">2.5</option>
+                <option value="0.8">0.8</option>
+                <option value="1">1</option>
+                <option value="1.2">1.2</option>
+                <option value="1.5">1.5</option>
+                <option value="2">2</option>
+                <option value="2.5">2.5</option>
             </select>
         </div>
     </div>
     <script src="scriptPrincipal.js"></script>
+    <script src="scriptEditorTexto.js"></script>
+    <script src="scriptEditorImagen.js"></script>
 </body>
 
 </html>

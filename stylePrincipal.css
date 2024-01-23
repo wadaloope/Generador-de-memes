@@ -53,9 +53,12 @@ h1 {
 
 }
 
-.boton-menu:hover {
+.descargar:hover,
+#edicion-imagen:hover,
+#edicion-texto:hover,
+#edicion-modo:hover {
     cursor: pointer;
-    filter: invert();
+    filter: brightness(200%)!important;
 }
 
 .icono {
@@ -87,8 +90,7 @@ h1 {
 .texto-meme {
     position: absolute;
     width: 510px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding: 12px 8px 12px;
     background-color: black;
     font-family: 'Passion One', sans-serif;
     font-size: 4vw;
@@ -121,15 +123,10 @@ h1 {
     background-color: rgb(17, 56, 55);
 }
 
-.descargar:hover {
-    cursor: pointer;
-    filter: invert();
-}
-
 .panel-editor {
     width: 400px;
     height: auto;
-    background-color: rgb(47, 150, 133);
+    background-color: rgb(37, 116, 102);
     display: none;
 }
 
@@ -193,6 +190,7 @@ input[type="file"] {
 
     .texto-meme {
         width: 100%;
+        text-overflow: ellipsis!important;
     }
 
     #imgTag {
