@@ -20,39 +20,37 @@ mezclaElegida.addEventListener("input", (e) => {
 })
 
 /* -----------------------------------Seleccion y aplicacion de filtros------------------------------------ */
-/*esto esta dando muchos problemas y he cambiado los setings de los ranges un monton de veces*/
 const filtros = document.getElementsByClassName('rango');
-const valorFiltro = [100, 100, 100, 0, 0, 0, 0, 100, 0];
+let stringFiltros = "\"";
+
 for (let i = 0; i < filtros.length; i++) {
-    filtros[i].addEventListener("change", (e) => {
-        let oracion=`"brightness(${filtros[0].value}) opacity(${filtros[1].value}%) contrast(${filtros[2].value}%) blur(${filtros[3].value}px) greyscale(${filtros[4].value}%) sepia(${filtros[5].value}%) hue-rotate(${filtros[6].value}deg) saturate(${filtros[7].value}%) invert(${filtros[8].value}%)"`;
-        imagenCargar.style.filter=oracion;
-        console.log(oracion);
+    filtros[i].addEventListener("input", (e) => {
+        let stringFiltros = "";
+        for (let j = 0; j < filtros.length; j++) {
+            stringFiltros += filtros[j].id + "(" + filtros[j].value + filtros[j].name + ") ";
+        }
+        stringFiltros = stringFiltros.trim();
+        imagenCargar.style.filter = stringFiltros;
     })
 }
 
-/* -------------------------------------------Reseteo de filtros------------------------------------------- */
-const reset=document.getElementsByClassName('boton-filtros')[0];
 
-reset.addEventListener("click",(e)=>{
-    imagenCargar.style.filter="brightness(100%)";
-    filtros[0].value=100;
-    imagenCargar.style.filter="opacity(100%)";
-    filtros[1].value=100;
-    imagenCargar.style.filter="contrast(100%)";
-    filtros[2].value=100;
-    imagenCargar.style.filter="blur(0%)";
-    filtros[3].value=0;
-    imagenCargar.style.filter="greyscale(0%)";
-    filtros[4].value=0;
-    imagenCargar.style.filter="sepia(0%)";
-    filtros[5].value=0;
-    imagenCargar.style.filter="hue-rotate(0deg)";
-    filtros[6].value=0;
-    imagenCargar.style.filter="saturate(100%)"
-    filtros[7].value=100;
-    imagenCargar.style.filter="invert(0%)";
-    filtros[8].value=10;
+
+
+/* -------------------------------------------Reseteo de filtros------------------------------------------- */
+const reset = document.getElementsByClassName('boton-filtros')[0];
+
+reset.addEventListener("click", (e) => {
+    const valorFiltro = [100, 100, 100, 0, 0, 0, 0, 100, 0];
+    let stringReset = "\"";
+    for (let k = 0; k < filtros.length; k++) {
+        filtros[k].value = valorFiltro[k];
+        stringReset += filtros[k].id + "(" + filtros[k].value + filtros[k].name + ") ";
+    }
+    stringReset = stringReset.trim();
+    console.log(stringReset);
+    imagenCargar.style.filter="none";
+    imagenCargar.style.filter = stringReset;
 })
 
 

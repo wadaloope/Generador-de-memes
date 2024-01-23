@@ -49,6 +49,8 @@ label {
     line-height: 0px;
 }
 
+#superior:focus::placeholder,
+#inferior:focus::placeholder,
 #url-imagen:focus::placeholder {
     color: transparent;
   }

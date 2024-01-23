@@ -20,7 +20,7 @@ tildeTxtSup.addEventListener("change", (e) => {
     }
 })
 
-/* ----------------------Ingreso de texto inferior / Ocultamiento de banner inferior- --------------------- */
+/* ----------------------Ingreso de texto inferior / Ocultamiento de banner inferior----------------------- */
 const bannerInf = document.getElementsByClassName('texto-meme')[1];
 const casillaTxtInf = document.getElementById('inferior');
 const tildeTxtInf = document.getElementById('sin-text-i');

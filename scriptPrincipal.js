@@ -6,7 +6,7 @@ const panelTxt = document.getElementsByClassName('panel-editor')[1];
 const fileInput = document.getElementById("fileInput");
 const downloadBtn = document.getElementById("downloadBtn");
 
-//↓↓↓-Seleccion y ocultamiento del panel para edicion de imagen-↓↓↓
+//↓↓↓-----------------Seleccion y ocultamiento para el panel de edicion de imagen------------------↓↓↓
 
 let edicImg = false;
 let edicTxt = false;
@@ -26,7 +26,7 @@ btnImg.addEventListener("click", (e) => {
     }
 })
 
-//↓↓↓-Seleccion y ocultamiento para el panel de edicion de texto-↓↓↓
+//↓↓↓-----------------Seleccion y ocultamiento para el panel de edicion de texto-------------------↓↓↓
 
 btnTxt.addEventListener("click", (e) => {
     if (!edicTxt) {
@@ -44,7 +44,8 @@ btnTxt.addEventListener("click", (e) => {
     }
 })
 
-//↓↓↓-Activacion y descativacion del modo nocturno-↓↓↓
+//↓↓↓-----------------------Activacion y descativacion del modo nocturno---------------------------↓↓↓
+
 let nocheEstado = true;
 
 btnModo.addEventListener("click", (e) => {
@@ -55,7 +56,7 @@ btnModo.addEventListener("click", (e) => {
 //------parche para contrarrestar los efectos de implementar el modo oscuro de manera peculiar------
         for (let i = 0; i < document.getElementsByClassName('cajaColor').length; i++)               //
             document.getElementsByClassName('cajaColor')[i].style.filter = "invert(100%)";          //
-            document.getElementsByClassName('lienzo')[0].style.filter="invert(100%)"                //
+        document.getElementsByClassName('lienzo')[0].style.filter="invert(100%)"                    //
 //------------------------------------------fin de parche-------------------------------------------
         nocheEstado = false;
     }
@@ -66,16 +67,13 @@ btnModo.addEventListener("click", (e) => {
 //------parche para contrarrestar los efectos de implementar el modo oscuro de manera peculiar------
         for (let i = 0; i < document.getElementsByClassName('cajaColor').length; i++)               //
             document.getElementsByClassName('cajaColor')[i].style.filter = "none";                  //
-        document.getElementById("imgTag").style.filter = "none";                                    //
-        document.getElementsByClassName("texto-meme")[0].style.filter="none"                        //
-        document.getElementsByClassName("texto-meme")[1].style.filter="none"                        //
-        document.getElementsByClassName('lienzo')[0].style.filter="invert(0%)"                      //
+         document.getElementsByClassName('lienzo')[0].style.filter="invert(0%)"                     //
 //------------------------------------------fin de parche-------------------------------------------
         nocheEstado = true;
     }
 })
 
-//↓↓↓-Cargado de imagen desde disco duro-↓↓↓
+//↓↓↓---------------------------Cargado de imagen desde disco duro---------------------------------↓↓↓
 
 fileInput.addEventListener("change", (e) => {
     const file = e.target.files[0];
@@ -88,8 +86,9 @@ fileInput.addEventListener("change", (e) => {
         };
         reader.readAsDataURL(file);
     }
-
 })
+
+//↓↓↓----------------------------------Descarga de imagen------------------------------------------↓↓↓
 
 
 
