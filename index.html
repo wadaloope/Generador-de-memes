@@ -4,9 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generador de Memes</title>
+    <link rel="icon" type="image/x-icon" href="images/meme.png">
     <link rel="stylesheet" href="stylePrincipal.css">
     <link rel="stylesheet" href="stylePaneles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+        integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Generador de Memes</title>
 </head>
 
 <body>
@@ -81,18 +86,15 @@
             </div>
             <div class="barra-filtro">
                 <label for="contrast">CONTRASTE</label><br>
-                <input type="range" class="rango" id="contrast" name="%" min="0" max="200" value="100"
-                    step="10" />
+                <input type="range" class="rango" id="contrast" name="%" min="0" max="200" value="100" step="10" />
             </div>
             <div class="barra-filtro">
                 <label for="blur">DESENFOQUE</label><br>
-                <input type="range" class="rango" id="blur" name="px" min="0" max="10" value="0"
-                    step="0.1" />
+                <input type="range" class="rango" id="blur" name="px" min="0" max="10" value="0" step="0.1" />
             </div>
             <div class="barra-filtro">
                 <label for="grayscale">ESCALA DE GRISES</label><br>
-                <input type="range" class="rango" id="grayscale" name="%" min="0" max="100" value="0"
-                    step="10" />
+                <input type="range" class="rango" id="grayscale" name="%" min="0" max="100" value="0" step="10" />
             </div>
             <div class="barra-filtro">
                 <label for="sepia">SEPIA</label><br>
@@ -100,13 +102,11 @@
             </div>
             <div class="barra-filtro">
                 <label for="hue-rotate">HUE</label><br>
-                <input type="range" class="rango" id="hue-rotate" name="deg" min="0" max="359" value="0"
-                    step="1" />
+                <input type="range" class="rango" id="hue-rotate" name="deg" min="0" max="359" value="0" step="1" />
             </div>
             <div class="barra-filtro">
                 <label for="saturate">SATURACIÓN</label><br>
-                <input type="range" class="rango" id="saturate" name="%" min="0" max="200" value="100"
-                    step="10" />
+                <input type="range" class="rango" id="saturate" name="%" min="0" max="200" value="100" step="10" />
             </div>
             <div class="barra-filtro">
                 <label for="invert">NEGATIVO</label><br>
@@ -137,19 +137,19 @@
         <div class="selec-fuente">
             <label for="fuente" class="titulo-falso">FUENTE</label>
             <select name="fuente" id="fuente">
-                <option value="arial">Arial</option>
-                <option value="sen">Sen</option>
-                <option value="arial-black">Arial Black</option>
-                <option value="typewriter">American Typewriter</option>
-                <option value="andale">Andale Mono</option>
-                <option value="comics">Comic Sans MS</option>
-                <option value="helvetica">Helvetica</option>
+                <option value="'Passion One', sans-serif">Passion One</option>
+                <option value="'Mouse Memoirs', sans-serif">Mouse Memoires</option>
+                <option value="'Special Elite', system-ui">Special Elite</option>
+                <option value="'Creepster', system-ui">Creepster</option>
+                <option value="'Press Start 2P', system-ui">Press Start</option>
+                <option value="'Sen', sans-serif">Sen</option>
                 <option value="impact">Impact</option>
-                <option value="verdana">Verdana</option>
-                <option value="times">Times New Roman</option>
+                <option value="andale">Times New Roman</option>
+                <option value="arial">Arial</option>
+                <option value="cursive">Comic Sans MS</option>
             </select>
             <div class="formato-texto">
-                <input type="number" id="formatoTxt" value="16" min="12" max="85" step="1" />
+                <input type="number" id="formatoTxt" value="45" min="12" max="85" step="1" />
                 <img class="btnJustif" value="left" src="images/izquierda.png" alt="">
                 <img class="btnJustif" value="center" src="images/centro.png" alt="">
                 <img class="btnJustif" value="right" src="images/derecha.png" alt="">
@@ -203,6 +203,7 @@
     <script src="scriptPrincipal.js"></script>
     <script src="scriptEditorTexto.js"></script>
     <script src="scriptEditorImagen.js"></script>
+
 </body>
 
 </html>

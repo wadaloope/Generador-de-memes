@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Passion+One&family=Sen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Mouse+Memoirs&family=Press+Start+2P&family=Sen&family=Special+Elite&display=swap');
 
 * {
     padding: 0;
@@ -93,7 +94,7 @@ h1 {
     padding: 12px 8px 12px;
     background-color: black;
     font-family: 'Passion One', sans-serif;
-    font-size: 4vw;
+    font-size: 45px;
     color: #ffffff;
     text-align: center;
 }

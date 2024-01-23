@@ -53,22 +53,22 @@ btnModo.addEventListener("click", (e) => {
         document.getElementsByTagName('body')[0].classList.add("dia");
         document.getElementsByClassName('modo_o')[0].innerHTML = "claro";
 
-//------parche para contrarrestar los efectos de implementar el modo oscuro de manera peculiar------
+        //------parche para contrarrestar los efectos de implementar el modo oscuro de manera peculiar------
         for (let i = 0; i < document.getElementsByClassName('cajaColor').length; i++)               //
             document.getElementsByClassName('cajaColor')[i].style.filter = "invert(100%)";          //
-        document.getElementsByClassName('lienzo')[0].style.filter="invert(100%)"                    //
-//------------------------------------------fin de parche-------------------------------------------
+        document.getElementsByClassName('lienzo')[0].style.filter = "invert(100%)"                  //
+        //------------------------------------------fin de parche-------------------------------------------
         nocheEstado = false;
     }
     else {
         document.getElementsByTagName('body')[0].classList.remove("dia");
         document.getElementsByClassName('modo_o')[0].innerHTML = "oscuro";
 
-//------parche para contrarrestar los efectos de implementar el modo oscuro de manera peculiar------
+        //------parche para contrarrestar los efectos de implementar el modo oscuro de manera peculiar------
         for (let i = 0; i < document.getElementsByClassName('cajaColor').length; i++)               //
             document.getElementsByClassName('cajaColor')[i].style.filter = "none";                  //
-         document.getElementsByClassName('lienzo')[0].style.filter="invert(0%)"                     //
-//------------------------------------------fin de parche-------------------------------------------
+        document.getElementsByClassName('lienzo')[0].style.filter = "invert(0%)"                    //
+        //------------------------------------------fin de parche-------------------------------------------
         nocheEstado = true;
     }
 })
@@ -90,5 +90,22 @@ fileInput.addEventListener("change", (e) => {
 
 //↓↓↓----------------------------------Descarga de imagen------------------------------------------↓↓↓
 
+const btnDescarga = document.getElementsByClassName('descargar')[0];
+const canvas = document.getElementsByClassName('lienzo')[0];
 
+btnDescarga.addEventListener("click", () => {
+    if (!nocheEstado)                               //parche del modo nocturno
+        canvas.style.filter = "invert(0)";          //do not ask 😓
+
+
+    domtoimage.toBlob(canvas).then((blob) => {
+        if (!nocheEstado)                           //parche del modo nocturno
+            canvas.style.filter = "invert(100%)";   //do not ask
+        saveAs(blob, "meme.png");
+
+    })
+        .catch((error) => {
+            console.error('Fijate si te olvidaste la imagen', error);
+        });
+});
 
