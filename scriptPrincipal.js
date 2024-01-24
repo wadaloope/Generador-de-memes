@@ -18,12 +18,15 @@ btnImg.addEventListener("click", (e) => {
         edicTxt = false;
         btnImg.style.filter = "brightness(200%)";
         btnTxt.style.filter = "brightness(100%)";
+        if(window.visualViewport.width<"970px")
+             document.getElementById("firma_escritorio").style.display="none";
     }
     else {
         panelImg.classList.remove('panelOn');
         edicImg = false;
         btnImg.style.filter = "brightness(100%)";
-    }
+            document.getElementById("firma_escritorio").style.display="block";
+     }
 })
 
 //↓↓↓-----------------Seleccion y ocultamiento para el panel de edicion de texto-------------------↓↓↓
@@ -36,12 +39,15 @@ btnTxt.addEventListener("click", (e) => {
         edicImg = false;
         btnTxt.style.filter = "brightness(200%)";
         btnImg.style.filter = "brightness(100%)";
+        if(window.visualViewport.width<"970px")
+                document.getElementById("firma_escritorio").style.display="none";
     }
     else {
         panelTxt.classList.remove('panelOn');
         edicTxt = false;
         btnTxt.style.filter = "brightness(100%)";
-    }
+            document.getElementById("firma_escritorio").style.display="block";
+     }
 })
 
 //↓↓↓-----------------------Activacion y descativacion del modo nocturno---------------------------↓↓↓

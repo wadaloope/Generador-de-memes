@@ -216,9 +216,22 @@ div>input[type='range']:focus {
     margin-top: 5px;
 }
 
+.firma{
+    text-align: center;
+    color: rgb(176, 252, 252);
+}
+
+#firma_responsive{
+    display: none;
+}
+
 @media (max-width:970px) {
     
     .contorno,
     .boton-filtros {
         width: 100%;
-    }}
+    }
+    #firma_responsive{
+        display: block;
+    }
+}

@@ -59,7 +59,7 @@ h1 {
 #edicion-texto:hover,
 #edicion-modo:hover {
     cursor: pointer;
-    filter: brightness(200%)!important;
+    filter: brightness(200%) !important;
 }
 
 .icono {
@@ -71,7 +71,7 @@ h1 {
     display: inline-block;
     font-family: 'Francois One', sans-serif;
     font-weight: 40;
-    font-size: 1.7vw;
+    font-size: 2em;
     color: rgb(176, 252, 252);
 }
 
@@ -117,7 +117,7 @@ h1 {
     border: 0px;
     font-family: 'Francois One', sans-serif;
     font-weight: 40;
-    font-size: 1.7vw;
+    font-size: 1.5em;
     color: rgb(176, 252, 252);
     margin: auto;
     margin-top: 10px;
@@ -164,11 +164,23 @@ input[type="file"] {
     object-fit: cover;
 }
 
+footer {
+    padding-bottom: 10px;
+}
+
+.firma {
+    text-align: center;
+    color: rgb(176, 252, 252);
+}
 
 @media (max-width:970px) {
     body {
         width: calc(100vw-17px);
         flex-direction: column;
+    }
+
+    h1{
+        font-size:2.1em ;
     }
 
     .principal {
@@ -189,27 +201,58 @@ input[type="file"] {
         max-height: 510px;
     }
 
-    .texto-meme {
-        width: 100%;
-        text-overflow: ellipsis!important;
+    .texto-menu {
+        font-size: 1.8em;
     }
 
+    .texto-meme {
+        width: 100%;
+        text-overflow: ellipsis !important;
+        font-size: 30px;
+    }
+
+    .descargar{
+        font-size: 1.3em;
+    }
+    
     #imgTag {
         max-width: 510px;
         max-height: 510px;
         object-fit: cover;
     }
+
+    .firma_escritorio {
+        display: none!important;
+    }
 }
 
 @media (max-width:510px) {
-.espacio-de-trabajo,
-.lienzo {
-    max-width: 100vw;
-    height: 100vw;
-}
-#imgTag {
-    width: 100%;
-    height: 100vw;
-    object-fit: cover;
-}
+    
+    h1{
+        font-size:1.7em ;
+    }
+
+    .texto-menu {
+        font-size: 1.3em;
+    }
+
+    .descargar{
+        font-size: 0.9em;
+    }
+
+    .icono{
+        width: 30px;
+    }
+
+    .espacio-de-trabajo,
+    .lienzo {
+        max-width: 340px;
+        height: 100vw;
+    }
+
+    #imgTag {
+        width: 100%;
+        height: 100vw;
+        object-fit: cover;
+    }
 }
