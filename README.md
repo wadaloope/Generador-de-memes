@@ -21,7 +21,11 @@ La aplicación cuenta con una presentación de escritorio y otra diseñada para 
 
 ## Visuales 🎞️​
 
-https://github.com/wadaloope/Generador-de-memes/assets/139147384/11cb551f-ce80-407b-8284-bb8db920a9d7
+
+
+https://github.com/wadaloope/Generador-de-memes/assets/139147384/145262d1-8bbb-4ed3-9b37-a952d22836ed
+
+
 
 
 ## Tecnologías empleadas 🛠️
