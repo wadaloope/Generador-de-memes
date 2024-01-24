@@ -62,7 +62,11 @@ btnModo.addEventListener("click", (e) => {
         //------parche para contrarrestar los efectos de implementar el modo oscuro de manera peculiar------
         for (let i = 0; i < document.getElementsByClassName('cajaColor').length; i++)               //
             document.getElementsByClassName('cajaColor')[i].style.filter = "invert(100%)";          //
-        document.getElementsByClassName('lienzo')[0].style.filter = "invert(100%)"                  //
+        document.getElementsByClassName('lienzo')[0].style.filter = "invert(100%)";                 //
+                                                                                                    //
+        for(i=0;i<document.getElementsByTagName('option').length;i++){                              // 
+            document.getElementsByTagName('option')[i].style.backgroundColor="rgb(233, 184, 188)";  // 
+            document.getElementsByTagName('option')[i].style.color="rgb(90, 17, 17)"}               //
         //------------------------------------------fin de parche-------------------------------------------
         nocheEstado = false;
     }
@@ -73,7 +77,12 @@ btnModo.addEventListener("click", (e) => {
         //------parche para contrarrestar los efectos de implementar el modo oscuro de manera peculiar------
         for (let i = 0; i < document.getElementsByClassName('cajaColor').length; i++)               //
             document.getElementsByClassName('cajaColor')[i].style.filter = "none";                  //
-        document.getElementsByClassName('lienzo')[0].style.filter = "invert(0%)"                    //
+        document.getElementsByClassName('lienzo')[0].style.filter = "invert(0%)";                   //
+                                                                                                    //
+        for(i=0;i<document.getElementsByTagName('option').length;i++){                              // 
+            document.getElementsByTagName('option')[i].style.backgroundColor="rgb(17, 56, 55)";     // 
+            document.getElementsByTagName('option')[i].style.color="rgb(176, 252, 252)"}            // 
+            
         //------------------------------------------fin de parche-------------------------------------------
         nocheEstado = true;
     }
