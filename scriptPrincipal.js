@@ -6,7 +6,7 @@ const panelTxt = document.getElementsByClassName('panel-editor')[1];
 const fileInput = document.getElementById("fileInput");
 const downloadBtn = document.getElementById("downloadBtn");
 
-//↓↓↓-----------------Seleccion y ocultamiento para el panel de edicion de imagen------------------↓↓↓
+//↓↓↓-----------------Seleccion y ocultamiento para el panel de edicion de imagen-----------------'-↓↓↓
 
 let edicImg = false;
 let edicTxt = false;
