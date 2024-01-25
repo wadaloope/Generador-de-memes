@@ -42,8 +42,8 @@ Las tecnologías empleadas comprenden HTML5, CSS y Javascript. En función de la
   - Funcionamiento PANEL EDICIÓN DE IMAGEN
 
 En suma a los lenguajes utilizados, debe señalarse la incorporación de:
-    - Librerías domtoimage, para implentar la descarga del meme.
-    = Librerías de Google Fonts, para ampliar la oferta de fuentes en funcionamiento.
+  - Librerías domtoimage, para implentar la descarga del meme.
+  - Librerías de Google Fonts, para ampliar la oferta de fuentes en funcionamiento.
 
 ## Software utilizado ​💾​
 

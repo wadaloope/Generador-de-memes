@@ -158,10 +158,12 @@ input[type="file"] {
 
 }
 
+#image-box,
 #imgTag {
     height: 510px;
     width: 510px;
     object-fit: cover;
+    overflow: hidden;
 }
 
 footer {
