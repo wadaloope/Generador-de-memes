@@ -37,9 +37,9 @@ Las tecnologías empleadas comprenden HTML5, CSS y Javascript. En función de la
    - Estilo panel principal
    - Estilo paneles de edición
 - Tres archivos .JS cada uno de los cuales describe las funcionalidades que corresponden a cada panel.
-            - Funcionamiento PANEL PRINCIPAL
-            - Funcionamiento PANEL DE EDICIÓN DE TEXTO
-            - Funcionamiento PANEL EDICIÓN DE IMAGEN
+  - Funcionamiento PANEL PRINCIPAL
+  - Funcionamiento PANEL DE EDICIÓN DE TEXTO
+  - Funcionamiento PANEL EDICIÓN DE IMAGEN
 
 En suma a los lenguajes utilizados, debe señalarse la incorporación de:
     - Librerías domtoimage, para implentar la descarga del meme.
