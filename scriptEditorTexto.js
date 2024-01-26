@@ -12,10 +12,15 @@ tildeTxtSup.addEventListener("change", (e) => {
     if (!transpTxtSup) {
         bannerSup.style.color = "transparent";
         bannerSup.style.backgroundColor = "transparent";
+        bannerSup.style.WebkitTextStroke ="0px";
         transpTxtSup = true;
     } else {
         bannerSup.style.color = colorTempFte;
         bannerSup.style.backgroundColor = colorTempFdo;
+        if(contClaro.style.filter == "brightness(200%)")
+            bannerSup.style.WebkitTextStroke = `1.5px #FFFFFF`;
+        if(contOscuro.style.filter == "brightness(200%)")
+            bannerSup.style.WebkitTextStroke = `1.5px #000000`;
         transpTxtSup = false;
     }
 })
@@ -34,10 +39,15 @@ tildeTxtInf.addEventListener("change", (e) => {
     if (!transpTxtInf) {
         bannerInf.style.color = "transparent";
         bannerInf.style.backgroundColor = "transparent";
+        bannerInf.style.WebkitTextStroke ="0px";
         transpTxtInf = true;
     } else {
         bannerInf.style.color = colorTempFte;
         bannerInf.style.backgroundColor = colorTempFdo;
+        if(contClaro.style.filter == "brightness(200%)")
+            bannerInf.style.WebkitTextStroke = `1.5px #FFFFFF`;
+        if(contOscuro.style.filter == "brightness(200%)")
+            bannerInf.style.WebkitTextStroke = `1.5px #000000`;
         transpTxtInf = false;
     }
 })
@@ -89,6 +99,9 @@ justDer.addEventListener("click", (e) => {
 const colorFuente = document.getElementsByClassName('cajaColor')[1];
 const colorFondo = document.getElementsByClassName('cajaColor')[2];
 const tildeColorTxt = document.getElementById('sin-fondo');
+const etiquetaColorFte=document.getElementsByClassName('label-color')[1];
+const etiquetaColorFdoFte=document.getElementsByClassName('label-color')[2];
+
 let colorTempFdo = "#000000";
 let colorTempFte = "#FFFFFF";
 let transparencia = false;
@@ -97,12 +110,14 @@ colorFuente.addEventListener("input", (e) => {
     bannerSup.style.color = colorFuente.value;
     bannerInf.style.color = colorFuente.value;
     colorTempFte = colorFuente.value;
+    etiquetaColorFte.innerHTML=colorFuente.value.toUpperCase();
 })
 
 colorFondo.addEventListener("input", (e) => {
     bannerSup.style.backgroundColor = colorFondo.value;
     bannerInf.style.backgroundColor = colorFondo.value;
     colorTempFdo = colorFondo.value;
+    etiquetaColorFdoFte.innerHTML=colorFondo.value.toUpperCase();
 })
 
 tildeColorTxt.addEventListener("change", (e) => {

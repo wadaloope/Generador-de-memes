@@ -10,9 +10,11 @@ casillaURL.addEventListener("change", (e) => {
 const colorFondoImg = document.getElementsByClassName('cajaColor')[0];
 const cajaImg = document.getElementsByClassName('lienzo')[0];
 const mezclaElegida = document.getElementById('efecto-fondo');
+const etiquetaColorFdo=document.getElementsByClassName('label-color')[0];
 
 colorFondoImg.addEventListener("input", (e) => {
     cajaImg.style.backgroundColor = colorFondoImg.value;
+    etiquetaColorFdo.innerHTML=colorFondoImg.value.toUpperCase();
 })
 
 mezclaElegida.addEventListener("input", (e) => {
