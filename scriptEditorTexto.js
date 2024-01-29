@@ -16,7 +16,8 @@ tildeTxtSup.addEventListener("change", (e) => {
         transpTxtSup = true;
     } else {
         bannerSup.style.color = colorTempFte;
-        bannerSup.style.backgroundColor = colorTempFdo;
+        if(transparencia!=true)
+            bannerSup.style.backgroundColor = colorTempFdo;
         if(contClaro.style.filter == "brightness(200%)")
             bannerSup.style.WebkitTextStroke = `1.5px #FFFFFF`;
         if(contOscuro.style.filter == "brightness(200%)")
@@ -43,7 +44,8 @@ tildeTxtInf.addEventListener("change", (e) => {
         transpTxtInf = true;
     } else {
         bannerInf.style.color = colorTempFte;
-        bannerInf.style.backgroundColor = colorTempFdo;
+        if(transparencia!=true)
+            bannerInf.style.backgroundColor = colorTempFdo;
         if(contClaro.style.filter == "brightness(200%)")
             bannerInf.style.WebkitTextStroke = `1.5px #FFFFFF`;
         if(contOscuro.style.filter == "brightness(200%)")
@@ -116,10 +118,11 @@ colorFuente.addEventListener("input", (e) => {
 })
 
 colorFondo.addEventListener("input", (e) => {
-    if(transpTxtSup!=true)
-        bannerSup.style.backgroundColor = colorFondo.value;
-    if(transpTxtInf!=true)
-        bannerInf.style.backgroundColor = colorFondo.value;
+    if (!transparencia) {
+        if(transpTxtSup!=true)
+            bannerSup.style.backgroundColor = colorFondo.value;
+        if(transpTxtInf!=true)
+            bannerInf.style.backgroundColor = colorFondo.value;}
     colorTempFdo = colorFondo.value;
     etiquetaColorFdoFte.innerHTML=colorFondo.value.toUpperCase();
 })
@@ -130,8 +133,10 @@ tildeColorTxt.addEventListener("change", (e) => {
         bannerInf.style.backgroundColor = "transparent";
         transparencia = true;
     } else {
-        bannerSup.style.backgroundColor = colorTempFdo;
-        bannerInf.style.backgroundColor = colorTempFdo;
+        if(transpTxtSup!=true)
+            bannerSup.style.backgroundColor = colorTempFdo;
+        if(transpTxtInf!=true)
+            bannerInf.style.backgroundColor = colorTempFdo;
         transparencia = false;
     }
 })
@@ -150,16 +155,20 @@ sinCont.addEventListener("click", (e) => {
 })
 
 contClaro.addEventListener("click", (e) => {
-    bannerSup.style.WebkitTextStroke = `1.5px #FFFFFF`;
-    bannerInf.style.WebkitTextStroke = `1.5px #FFFFFF`;
+    if(transpTxtSup!=true)
+        bannerSup.style.WebkitTextStroke = `1.5px #FFFFFF`;
+    if(transpTxtInf!=true)
+        bannerInf.style.WebkitTextStroke = `1.5px #FFFFFF`;
     sinCont.style.filter = "brightness(100%)";
     contClaro.style.filter = "brightness(200%)";
     contOscuro.style.filter = "brightness(100%)";
 })
 
 contOscuro.addEventListener("click", (e) => {
-    bannerSup.style.WebkitTextStroke = `1.5px #000000`;
-    bannerInf.style.WebkitTextStroke = `1.5px #000000`;
+    if(transpTxtSup!=true)
+        bannerSup.style.WebkitTextStroke = `1.5px #000000`;
+    if(transpTxtInf!=true)
+        bannerInf.style.WebkitTextStroke = `1.5px #000000`;
     sinCont.style.filter = "brightness(100%)";
     contClaro.style.filter = "brightness(100%)";
     contOscuro.style.filter = "brightness(200%)";
