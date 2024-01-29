@@ -107,15 +107,19 @@ let colorTempFte = "#FFFFFF";
 let transparencia = false;
 
 colorFuente.addEventListener("input", (e) => {
-    bannerSup.style.color = colorFuente.value;
-    bannerInf.style.color = colorFuente.value;
+    if(transpTxtSup!=true)
+        bannerSup.style.color = colorFuente.value;
+    if(transpTxtInf!=true)
+        bannerInf.style.color = colorFuente.value;
     colorTempFte = colorFuente.value;
     etiquetaColorFte.innerHTML=colorFuente.value.toUpperCase();
 })
 
 colorFondo.addEventListener("input", (e) => {
-    bannerSup.style.backgroundColor = colorFondo.value;
-    bannerInf.style.backgroundColor = colorFondo.value;
+    if(transpTxtSup!=true)
+        bannerSup.style.backgroundColor = colorFondo.value;
+    if(transpTxtInf!=true)
+        bannerInf.style.backgroundColor = colorFondo.value;
     colorTempFdo = colorFondo.value;
     etiquetaColorFdoFte.innerHTML=colorFondo.value.toUpperCase();
 })
